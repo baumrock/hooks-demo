@@ -4,7 +4,14 @@ ProcessWire.modals = ProcessWire.wire(
       UIkit.modal.alert(msg, options);
     },
     ___confirm(msg, options) {
-      UIkit.modal.confirm(msg, options);
+      UIkit.modal.confirm(msg, options).then(
+        function () {
+          console.log("confirmed");
+        },
+        function () {
+          console.log("canceled");
+        }
+      );
     },
   },
   "modals"
