@@ -1,7 +1,0 @@
-2025-02-24 16:48:14	guest	https://hooks.ddev.site/http404/	Installed module 'ProcessRecentPages'
-2025-02-24 16:48:14	guest	https://hooks.ddev.site/http404/	Installed module 'AdminThemeUikit'
-2025-02-24 16:48:15	guest	http://hooks.ddev.site:443/http404/	Installed module 'ProcessLogger'
-2025-02-24 16:48:15	guest	http://hooks.ddev.site:443/http404/	Installed module 'InputfieldIcon'
-2025-02-24 16:54:17	ddevadmin	https://hooks.ddev.site/processwire/module/	Installed module 'RockJavaScriptHooks'
-2025-02-24 16:57:38	ddevadmin	https://hooks.ddev.site/processwire/module/	Installed module 'ProcessDemo'
-2025-02-24 17:02:36	ddevadmin	https://hooks.ddev.site/processwire/module/	Installed module 'RockDevTools'
