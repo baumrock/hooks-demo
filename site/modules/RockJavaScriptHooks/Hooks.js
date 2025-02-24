@@ -9,6 +9,11 @@ if (typeof ProcessWire == "undefined") ProcessWire = {};
   ProcessWire.addHookBefore = addHookBefore;
   ProcessWire.wire = wire;
 
+  // addComponent method for better syntax
+  ProcessWire.addComponent = function (name, data) {
+    ProcessWire[name] = ProcessWire.wire(data, name);
+  };
+
   // ##### Internal code to support hooks #####
 
   // hooks storage
