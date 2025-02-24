@@ -7,3 +7,9 @@ URL: /processwire
 user: ddevadmin
 pass: ddevadmin
 ```
+
+## Database
+
+```
+/site/assets/backups/database/db.sql
+```
