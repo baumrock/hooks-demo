@@ -1,7 +1,10 @@
 ProcessWire.modals = ProcessWire.wire(
   {
-    alert(msg) {
-      UIkit.modal.alert(msg);
+    ___alert(msg, options) {
+      UIkit.modal.alert(msg, options);
+    },
+    ___confirm(msg, options) {
+      UIkit.modal.confirm(msg, options);
     },
   },
   "modals"
