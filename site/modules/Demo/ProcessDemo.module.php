@@ -25,6 +25,8 @@ class ProcessDemo extends Process
 
   public function execute()
   {
+    $url = wire()->config->urls($this);
+    wire()->config->scripts->add($url . 'modal.js');
     return wire()->files->render(__DIR__ . '/demo.php');
   }
 }

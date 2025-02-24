@@ -1,4 +1,6 @@
-<?php namespace ProcessWire;
+<?php
+
+namespace ProcessWire;
 
 /**
  * ProcessWire Configuration File
@@ -8,12 +10,12 @@
  * Please see the file /wire/config.php which contains all configuration options you may
  * specify here. Simply copy any of the configuration options from that file and paste
  * them into this file in order to modify them.
- * 
+ *
  * SECURITY NOTICE
  * In non-dedicated environments, you should lock down the permissions of this file so
  * that it cannot be seen by other users on the system. For more information, please
  * see the config.php section at: https://processwire.com/docs/security/file-permissions/
- * 
+ *
  * This file is licensed under the MIT license
  * https://processwire.com/about/license/mit/
  *
@@ -22,7 +24,7 @@
  *
  */
 
-if(!defined("PROCESSWIRE")) die();
+if (!defined("PROCESSWIRE")) die();
 
 /** @var Config $config */
 
@@ -49,7 +51,7 @@ $config->templateCompile = false;
 /*** INSTALLER CONFIG ********************************************************************/
 /**
  * Installer: Database Configuration
- * 
+ *
  */
 $config->dbHost = 'db';
 $config->dbName = 'db';
@@ -60,69 +62,70 @@ $config->dbCharset = 'utf8mb4';
 $config->dbEngine = 'InnoDB';
 
 /**
- * Installer: User Authentication Salt 
- * 
+ * Installer: User Authentication Salt
+ *
  * This value was randomly generated for your system on 2025/02/24.
  * This should be kept as private as a password and never stored in the database.
  * Must be retained if you migrate your site from one server to another.
  * Do not change this value, or user passwords will no longer work.
- * 
+ *
  */
-$config->userAuthSalt = '6c471eaa9e2ce4b9eb93d95746e5ccc9d9dc2b47'; 
+$config->userAuthSalt = '6c471eaa9e2ce4b9eb93d95746e5ccc9d9dc2b47';
 
 /**
- * Installer: Table Salt (General Purpose) 
- * 
- * Use this rather than userAuthSalt when a hashing salt is needed for non user 
- * authentication purposes. Like with userAuthSalt, you should never change 
- * this value or it may break internal system comparisons that use it. 
- * 
+ * Installer: Table Salt (General Purpose)
+ *
+ * Use this rather than userAuthSalt when a hashing salt is needed for non user
+ * authentication purposes. Like with userAuthSalt, you should never change
+ * this value or it may break internal system comparisons that use it.
+ *
  */
-$config->tableSalt = '3be2c50e86e1c9e2fc24f21439dd5e4d6663dda6'; 
+$config->tableSalt = '3be2c50e86e1c9e2fc24f21439dd5e4d6663dda6';
 
 /**
  * Installer: File Permission Configuration
- * 
+ *
  */
 $config->chmodDir = '0755'; // permission for directories created by ProcessWire
-$config->chmodFile = '0644'; // permission for files created by ProcessWire 
+$config->chmodFile = '0644'; // permission for files created by ProcessWire
 
 /**
  * Installer: Time zone setting
- * 
+ *
  */
 $config->timezone = 'Europe/Vienna';
 
 /**
  * Installer: Admin theme
- * 
+ *
  */
 $config->defaultAdminTheme = 'AdminThemeUikit';
 
 /**
  * Installer: Unix timestamp of date/time installed
- * 
+ *
  * This is used to detect which when certain behaviors must be backwards compatible.
  * Please leave this value as-is.
- * 
+ *
  */
 $config->installed = 1740412091;
 
 
 /**
  * Installer: HTTP Hosts Whitelist
- * 
+ *
  */
 $config->httpHosts = array('hooks.ddev.site:443', 'hooks.ddev.site');
 
 
 /**
  * Installer: Debug mode?
- * 
- * When debug mode is true, errors and exceptions are visible. 
- * When false, they are not visible except to superuser and in logs. 
- * Should be true for development sites and false for live/production sites. 
- * 
+ *
+ * When debug mode is true, errors and exceptions are visible.
+ * When false, they are not visible except to superuser and in logs.
+ * Should be true for development sites and false for live/production sites.
+ *
  */
 $config->debug = true;
 
+$config->rockdevtools = true;
