@@ -27,6 +27,7 @@ class ProcessDemo extends Process
   {
     $url = wire()->config->urls($this);
     wire()->config->scripts->add($url . 'modals.js');
+    wire()->config->scripts->add($url . 'counter.js');
     return wire()->files->render(__DIR__ . '/demo.php');
   }
 }

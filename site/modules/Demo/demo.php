@@ -40,3 +40,30 @@
 <div class='uk-margin-top'></div>
 <button onclick="ProcessWire.modals.confirm('xxx')">confirm(xxx)</button>
 <div class='uk-margin-top'></div>
+
+<h3>Hooked Counter</h3>
+
+<div class='uk-margin'>
+  <label><input id='hook-counter' type='checkbox'> Hook counter</label>
+</div>
+
+<div class='uk-flex uk-flex-middle' style='gap:10px'>
+  <button class='uk-button' onclick="ProcessWire.counter.increase()">+</button>
+  <span>Count: <span class='count'>0</span></span>
+  <button class='uk-button' onclick="ProcessWire.counter.decrease()">-</button>
+</div>
+
+<script>
+  ProcessWire.addHookBefore('counter::increase', function(event) {
+    if (!document.getElementById('hook-counter').checked) return;
+    event.replace = true;
+    event.object.count += 10;
+    event.object.update();
+  });
+  ProcessWire.addHookBefore('counter::increase', function(event) {
+    if (!document.getElementById('hook-counter').checked) return;
+    event.replace = true;
+    event.object.count -= 10;
+    event.object.update();
+  });
+</script>
