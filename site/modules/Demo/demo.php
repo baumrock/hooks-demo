@@ -26,11 +26,13 @@
   });
 
   // add alerts after confirm/cancel
-  ProcessWire.addHookAfter('modals::confirmed', function(event) {
-    alert('Confirmed!');
+  ProcessWire.addHookBefore('modals::confirmed', function(event) {
+    alert('Confirmed! And prevented the original console.log (see console, it\'s empty!)');
+    event.replace = true;
   });
-  ProcessWire.addHookAfter('modals::canceled', function(event) {
-    alert('Canceled!');
+  ProcessWire.addHookBefore('modals::canceled', function(event) {
+    alert('Canceled! And prevented the original console.log (see console, it\'s empty!)');
+    event.replace = true;
   });
 </script>
 
