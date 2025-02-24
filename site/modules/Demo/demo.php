@@ -24,6 +24,14 @@
     });
     event.arguments(1, settings);
   });
+
+  // add alerts after confirm/cancel
+  ProcessWire.addHookAfter('modals::confirmed', function(event) {
+    alert('Confirmed!');
+  });
+  ProcessWire.addHookAfter('modals::canceled', function(event) {
+    alert('Canceled!');
+  });
 </script>
 
 <button onclick="ProcessWire.modals.alert('xxx')">alert(xxx)</button>
