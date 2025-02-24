@@ -93,3 +93,10 @@
   <span x-text="count"></span>
   <button x-on:click="count--">Decrement</button>
 </div>
+
+<h3>x-model example</h3>
+
+<div x-data="{ message: '' }">
+  <input tQype="text" x-model="message" placeholder="Type something...">
+  <span x-text="message"></span>
+</div>
