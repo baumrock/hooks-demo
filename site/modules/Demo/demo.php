@@ -34,7 +34,20 @@
     alert('Canceled! And prevented the original console.log (see console, it\'s empty!)');
     event.replace = true;
   });
+
+  // prevent modal if checkbox is checked
+  const disableModals = function(event) {
+    if (!document.getElementById('disable-modals').checked) return;
+    alert('modals disabled')
+    event.replace = true;
+  };
+  ProcessWire.addHookBefore('modals::alert', disableModals);
+  ProcessWire.addHookBefore('modals::confirm', disableModals);
 </script>
+
+<div class='uk-margin'>
+  <label><input id='disable-modals' type='checkbox'> Disable Modals</label>
+</div>
 
 <button onclick="ProcessWire.modals.alert('xxx')">alert(xxx)</button>
 <div class='uk-margin-top'></div>
