@@ -80,3 +80,16 @@
     event.object.update();
   });
 </script>
+
+<h3>AlpineJS Counter Example</h3>
+
+<div x-data="{ count: 0 }" class='uk-flex uk-flex-middle' style='gap:10px'>
+  <button x-on:click="count++">Increment</button>
+  <span x-text="count"></span>
+  <button x-on:click="count--">Decrement</button>
+</div>
+<div x-data="{ count: 0 }" class='uk-flex uk-flex-middle' style='gap:10px'>
+  <button x-on:click="count++">Increment</button>
+  <span x-text="count"></span>
+  <button x-on:click="count--">Decrement</button>
+</div>
